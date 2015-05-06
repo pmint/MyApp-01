@@ -1,0 +1,193 @@
+.preview-texts {
+  padding:0 2em;
+  font-size:xx-small;
+}
+
+.preview-texts li {
+  line-height:1;
+  border:none;
+  white-space:pre-wrap;
+}
+
+.folder-switch-container {
+  margin:0.5rem auto;
+}
+
+#lists .folder-switch {
+  display:inline-block;
+  padding:0 1em;
+  margin:0.25rem 0.25rem;
+  font-size:8pt;
+  width:auto;
+  height:auto;
+  border-radius: 1em;
+}
+
+section[role='region'] {
+  background-color: inherit;
+//  min-height: 100%;
+}
+
+section[role="region"] > header {
+  display: block;
+  height: 3.3rem;
+  padding: 1rem 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+}
+
+section[role="region"] .icon {
+  color: #fff;
+  font-size: 3rem;
+}
+
+section[role="region"].left,
+section[role="region"].right {
+  display: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+//  min-height:100%;
+}
+
+body {
+  font-size: medium;
+  background: #000;
+  color: #888;
+  padding-top: 3.5rem;
+}
+
+header.fixed,
+header.-fixed {
+  height: auto !important;
+}
+
+header.fixed h1,
+header.-fixed h1 {
+//  margin:0;
+//  padding:0;
+  position:sticky;
+  top:0;
+  left:0;
+  font-size: 16pt !important;;
+  width: 100% !important;;
+}
+
+#lists header button,
+#input-areas header button {
+  position: absolute;
+  top: 0.5rem;
+  width: auto;
+}
+
+#input-areas .back-tolist {
+  left: 0rem;
+}
+
+#input-areas .delete-note {
+  right: 0rem;
+}
+
+#sync1 {
+  right: 4rem;
+}
+
+#add-note1 {
+  right: 0rem;
+}
+
+p {
+  font-size: inherit;
+}
+
+#lists input,
+#lists button,
+#input-areas textarea,
+#input-areas select,
+#input-areas button {
+  font-size: 12pt;
+  color:inherit;
+  background-color: inherit;
+  background-image: none;
+  box-shadow: none;
+  margin:auto;
+  width: 100%;
+}
+
+#content,
+#content {
+/*   height: 30em; */
+  min-height: calc(100% - 5em);
+  max-height: auto;
+  word-break: break-all;  
+}
+
+#content[contenteditable='true'] a {
+  text-decoration: none;
+}
+
+#content * {
+  display:inline;
+}
+
+input {
+  height: 2.5em;
+}
+
+a {
+  color:inherit;
+}
+
+button {
+  height: 2.5em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  border-width:thin;
+  border-style:solid none solid;
+  border-color:#222 transparent #333;
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+//  word-break: break-all;
+  line-height: 1.75;
+}
+
+li a {
+  padding:0.5em 0.25em;
+  display:inline-block;
+  width:calc(100% - 0.25em * 2);
+  text-decoration:none;
+  font-size: 11pt;
+  cursor: default;
+}
+
+span.desc {
+  font-size: 11pt;
+  color:#555;
+  float: right;
+}
+
+.sel-select-heading {
+  height: 2.5em;
+  position:sticky;
+  top:10em;
+  left:0;
+  background:#000;
+}
+
+.fixed {
+  position:sticky;
+  top:0;
+  left:0;
+  background-color:#000;
+}

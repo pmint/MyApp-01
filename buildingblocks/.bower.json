@@ -1,0 +1,15 @@
+{
+  "name": "buildingblocks",
+  "homepage": "https://github.com/mozilla-b2g/Gaia-UI-Building-Blocks",
+  "version": "0.1.0",
+  "_release": "0.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.0",
+    "commit": "cc0be019f50074336bc9989c25069d598df96f91"
+  },
+  "_source": "git://github.com/mozilla-b2g/Gaia-UI-Building-Blocks.git",
+  "_target": "~0.1.0",
+  "_originalSource": "buildingblocks",
+  "_direct": true
+}
