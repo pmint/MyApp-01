@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.2",
   "name": "Notepad:01",
   "description": "Notepad (Dropbox accound required)",
   "launch_path": "/index.html",
@@ -17,9 +17,7 @@
       "description": "Required to load remote content"
     }
   },
-  "installs_allowed_from": [
-    "*"
-  ],
+  "installs_allowed_from": ["https://marketplace.firefox.com"],
   "locales": {
     "ja": {
       "name": "メモ帳:01",

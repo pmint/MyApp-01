@@ -1,4 +1,4 @@
-# My App:01
+# Notepad:01
 
 This software released under the MIT License.
 
