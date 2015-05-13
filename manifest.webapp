@@ -1,7 +1,7 @@
 {
-  "version": "0.1.2",
+  "version": "0.1.3",
   "name": "Notepad:01",
-  "description": "Notepad (Dropbox accound required)",
+  "description": "Notepad for Firefox OS 2.0+ (Dropbox accound required)",
   "launch_path": "/index.html",
   "icons": {
     "128": "/img/icons/icon128.png",
@@ -21,7 +21,7 @@
   "locales": {
     "ja": {
       "name": "メモ帳:01",
-      "description": "メモ帳アプリです（要Dropboxアカウント）"
+      "description": "メモ帳アプリです（要Dropboxアカウント・Firefox OS 2.0以上向け）"
     }
   },
   "default_locale": "ja",
