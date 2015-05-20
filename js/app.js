@@ -434,6 +434,15 @@ window.addEventListener('DOMContentLoaded', function() {
 			_href = location.href;
 
 			if (querystring.access_token){
+				//HACK: ファイル作成方法が分かるまでの仮コード
+				get(
+					'/.txt',
+					function(){},
+					function(){
+						put('/.txt', '');
+					}
+				);
+				
 				$('#access_token').text(querystring.access_token);
 				$('#sync1').trigger('click');
 				delete querystring.access_token;
