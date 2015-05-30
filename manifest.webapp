@@ -13,12 +13,7 @@
     "name": "pmint.name",
     "url": "http://pmint.name"
   },
-  "type": "privileged",
-  "permissions": {
-    "systemXHR": {
-      "description": "Required to load remote content"
-    }
-  },
+  "type": "web",
   "installs_allowed_from": ["https://marketplace.firefox.com"],
   "locales": {
     "ja": {

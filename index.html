@@ -1,126 +1,45 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width">
-    <link href="css/gaia-icons-embedded.css" rel="stylesheet" type="text/css">
-    <link href="css/headers.css" rel="stylesheet" type="text/css">
-    <link href="css/transitions.css" rel="stylesheet">
-    <link href="css/input_areas.css" rel="stylesheet">
-    <link href="css/inline.css" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet">
-    <script src="js/libs/l10n.js"></script>
-    <script src="js/libs/jquery-1.11.0.min.js"></script>
-    <script src="js/libs/underscore-min.js"></script>
-    <script src="js/libs/dropbox.js"></script>
-    <script src="js/app.js"></script>
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        font-size: 10px;
-      }
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <title></title>
 
-      div {
-        font-size:medium;
-      }
+        <link rel="prefetch" type="application/l10n" href="/data/locales.ini" />
+        <script src="/js/libs/l10n.js" defer></script>
 
-      h2.bb-docs {
-        font-weight: lighter;
-        color: #666;
-        margin: -0.1rem 0 0;
-        background-color: #f5f5f5;
-        padding: 0.4rem 0.4rem 0.4rem 3rem;
-        border: solid 0.1rem #e8e8e8;
-        margin: 3rem 0 1rem;
-      }
-
-      section[role="region"] {
-        position: relative;
-      }
-    </style>
-  </head>
-  <body>
-
-    <section class="current" role="region" id="lists" data-position="current">
-
-      <header class="fixed">
-        <button id="" class=""><span class="icon"></span></button>
-        <h1 class="list-title">Notes <em>(-)</em></h1>
-        <button id="sync1" class="sync">
-          <span class="icon icon-sync">↻</span>
-        </button>
-        <button id="add-note1" class="add-note">
-          <span class="icon icon-add">+</span>
-        </button>
-      </header>
-
-      <section class="search-text-container">
-        <input type="text" id="search-text1" class="search-text" placeholder="🔍 ex)word1 word2 ... ex)/RegExp/">
-      </section>
-
-      <section class="folder-switch-container">
-      </section>
-
-      <section class="control-container">
-        <input type="button" id="preview-switch" value="Preview">
-      </section>
-
-      <article class="content scrollable header">
-        <div id="display"><!-- ul, li --></div>
-        <div id="message"></div>
-      </article>
-
-      <section style="white-space:pre-line; word-break:break-all;">
-        [sys info]
-        - hash:<span id="hash"></span>↲
-        - access_token:<span id="access_token"></span>↲
-        <div>
-          <input type="button" id="auth" value="auth(popup)">
-        </div>
-      </section>
-
-    </section>
-
-    <section class="right" role="region" id="input-areas" data-position="right">
-      <header class="-fixed">
-        <button id="back-tolist1" class="back-tolist">
-          <span class="icon icon-back">&lt;</span>
-        </button>
-        <h1 class="title">Input Area</h1>
-        <button id="delete-note1" class="delete-note">
-          <span class="icon icon-delete">×</span>
-        </button>
-      </header>
-      <br style="margin-top:0.25rem;">
-      <article class="content scrollable header">
-        <form class="paddings">
-          <div>
-            <div>
-              <input id="path" type="hidden" value="">
-            </div>
-            <!-- <div><input id="btn-focus" type="button" value="focus"></div> -->
-
-            <div><button id="btn-back">history back</button></div>
-            <div><button id="btn-forward">history forward</button></div>
-            <br>
-            <div><button id="post">post</button></div>
-            <br>
-            <div><button id="btn-view-mode">switch to <b>edit</b> mode</button></div>
-
-            <br style="margin-top:0.25rem;">
-            <header class="fixed">
-              <div><select class="sel-select-heading"></select></div>
+        <link href="/bb/headers.css" rel="stylesheet">
+        <link href="/css/fonts.css" rel="stylesheet">
+        <link href="/css/app.css" rel="stylesheet">
+        <!-- <script src="/js/zepto.min.js" defer></script> -->
+        <script src="/js/jquery-1.11.0.min.js" defer></script>
+        <script src="/js/underscore-min.js" defer></script>
+        <script src="/js/localforage.min.js" defer></script>
+        <script src="/js/libs/dropbox.js" defer></script>
+<!--
+        <script src="/js/app.js" defer></script>
+-->
+    </head>
+    <body role="application">
+        <section role="region">
+            <header>
+                <a href="#"><span class="icon icon-close">close</span></a>
+                <h1 data-l10n-id="app_title">app</h1>
+                <menu type="toolbar">
+                    <button>⚙</button>
+                    <button><span class="icon icon-edit">edit</span></button>
+                    <button><span class="icon icon-add">add</span></button>
+                </menu>
             </header>
-            <br style="margin-top:0.25rem;">
-            <div><section id="content" contenteditable="false" placeholder="今、なにしてる？"></section></div>
-            <div style="display:none;"><textarea id="-content" placeholder="今、なにしてる？"></textarea></div>
-            <input id="stored-content" type="hidden" value="">
-          </div>
-        </form>
-        <hr style="background-color:#222; border:none; width:90%;">
-      </article>
-    </section>
-  </body>
+        </section>
+        <section>
+            <p>
+                <a href="/bb/headers/index.html">headers</a><br>
+                <a href="/bb/input_areas/index.html">input_areas</a><br>
+            </p>
+            <p data-l10n-id="app_description">This app demonstrates the usage of <code>XMLHttpRequest</code> and the <code>systemXHR</code> permission.</p>
+        </section>
+    </body>
 </html>
