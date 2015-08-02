@@ -17,15 +17,14 @@
 	  <link href="/bb/bb.css" rel="stylesheet">
         <link href="/css/fonts.css" rel="stylesheet">
         <link href="/css/app.css" rel="stylesheet">
-        <!-- <script src="/js/libs/zepto.min.js" defer></script> -->
-        <script src="/js/libs/jquery-1.11.0.min.js" defer></script>
+        <!-- <script src="/js/libs/zepto.min.js"></script> -->
+        <script src="/js/libs/jquery-1.11.0.min.js"></script>
         <script src="/js/libs/underscore-min.js" defer></script>
         <script src="/js/libs/localforage.min.js" defer></script>
         <script src="/js/libs/dropbox.js" defer></script>
         <script src="/bb/bb.js" defer></script>
         <script src="/js/app.js" defer></script>
         <!-- <script src="/.js0/app.js" defer></script> -->
-
   <style>
     html, body {
       margin: 0;
@@ -124,12 +123,12 @@ body {
           <ul>
             <li>
               <a id="btn1" href="#m=get">
-                <p>#m=get</p>
+                <p>#item1</p>
               </a>
             </li>
             <li>
-              <a id="btn-input-areas" href="#">
-                <p>btn-input-areas</p>
+              <a id="btn-input-areas" href="#2">
+                <p>#item2</p>
               </a>
             </li>
           </ul>
@@ -150,16 +149,62 @@ body {
       <a id="btn-input-areas-back" href="#"><span class="icon icon-back">back</span></a>
       <h1>Input areas</h1>
     </header>
+    <p style="position:fixed; text-align:center;">&lt;-- swipe here --&gt;</p>
+    <section id="scroll" style="overflow-x:scroll;">
+<script>
+$(document).ready(function(){
+	var f = function(e){
+		console.log('touchend');
+		var sleft = $('#scroll').scrollLeft();
+		var w = $('article.content').eq(0).width();
+		var sleft1 = sleft - (sleft + (w * 0.5)) % w + (w * 0.5);
+		$('#scroll').animate({ scrollLeft: sleft1 }, 250);
+	};
+	$('.content').bind('touchend', f);
+	$('.content').bind('mouseup', f);
+});
+</script>
+
 	<article class="content scrollable header">
 <!--			<form class="paddings"> -->
 			<p>
 				<textarea placeholder="Placeholder in textarea"></textarea>
 			</p>
 <!--			</form> -->
+	</article><article class="content scrollable header">
+		<p><textarea placeholder="textarea 1"></textarea></p>
+	</article><article class="content scrollable header">
+		<p><textarea placeholder="textarea 2"></textarea></p>
+	</article><article class="content scrollable header">
+		<p><textarea placeholder="textarea 3"></textarea></p>
+	</article>
+<style>
+#input-areas {
+	overflow-y: hidden;
+	white-space: nowrap;
+	padding: 0;
+	width: 100vw;
+}
+#input-areas > header:first-child {
+	width: 100%;
+}
+article.content {
+	display: inline-block;
+	width: 100vw;
+}
+article.content textarea {
+	width: 100%;
+	height: 50vh;
+	max-height: none;
+	padding-top: 1em;
+}
+</style>
+
         <section role="region">
             <p data-l10n-id="app_description">This app demonstrates the usage of <code>XMLHttpRequest</code> and the <code>systemXHR</code> permission.</p>
         </section>
 	</article>
+    </section>
   </section>
 
 
